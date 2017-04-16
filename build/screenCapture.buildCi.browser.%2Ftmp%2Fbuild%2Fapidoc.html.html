@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/chimurai/http-proxy-middleware"
-
-    >http-proxy-middleware (v0.17.4)</a>
+    <a href="https://github.com/chimurai/http-proxy-middleware">http-proxy-middleware (v0.17.4)</a>
 </h1>
 <h4>The one-liner node.js proxy middleware for connect, express and browser-sync</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.http-proxy-middleware">module http-proxy-middleware</a><ol>
 
@@ -157,24 +150,24 @@
         options: {}
     };
 
-    // app.use(&#x27;/api&#x27;, proxy({target:&#x27;http://localhost:9000&#x27;}));
+    // app.use('/api', proxy({target:'http://localhost:9000'}));
     if (isContextless(context, opts)) {
-        config.context = &#x27;/&#x27;;
+        config.context = '/';
         config.options = _.assign(config.options, context);
     }
-    // app.use(&#x27;/api&#x27;, proxy(&#x27;http://localhost:9000&#x27;));
-    // app.use(proxy(&#x27;http://localhost:9000/api&#x27;));
+    // app.use('/api', proxy('http://localhost:9000'));
+    // app.use(proxy('http://localhost:9000/api'));
     else if (isStringShortHand(context)) {
         var oUrl   = url.parse(context);
-        var target = [oUrl.protocol, &#x27;//&#x27;, oUrl.host].join(&#x27;&#x27;);
+        var target = [oUrl.protocol, '//', oUrl.host].join('');
 
-        config.context = oUrl.pathname || &#x27;/&#x27;;
+        config.context = oUrl.pathname || '/';
         config.options = _.assign(config.options, {target: target}, opts);
 
-        if (oUrl.protocol === &#x27;ws:&#x27; || oUrl.protocol === &#x27;wss:&#x27;) {
+        if (oUrl.protocol === 'ws:' || oUrl.protocol === 'wss:') {
             config.options.ws = true;
         }
-    // app.use(&#x27;/api&#x27;, proxy({target:&#x27;http://localhost:9000&#x27;}));
+    // app.use('/api', proxy({target:'http://localhost:9000'}));
     } else {
         config.context = context;
         config.options = _.assign(config.options, opts);
@@ -183,13 +176,13 @@
     configureLogger(config.options);
 
     if (!config.options.target) {
-        throw new Error(&#x27;[HPM] Missing &#x22;target&#x22; option. Example: {target: &#x22;http://www.example.org&#x22;}&#x27;);
+        throw new Error('[HPM] Missing "target" option. Example: {target: "http://www.example.org"}');
     }
 
     // Legacy option.proxyHost
     config.options = mapLegacyProxyHostOption(config.options);
 
-    // Legacy option.proxyTable &#x3e; option.router
+    // Legacy option.proxyTable &gt; option.router
     config.options = mapLegacyProxyTableOption(config.options);
 
     return config;
@@ -206,3 +199,4 @@
     ]
 </div>
 </div>
+</body></html>
