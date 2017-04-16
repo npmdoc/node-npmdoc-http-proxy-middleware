@@ -1,1 +1,39 @@
-{     "devDependencies": {         "http-proxy-middleware": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-http-proxy-middleware",     "homepage": "https://github.com/npmdoc/node-npmdoc-http-proxy-middleware",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-http-proxy-middleware.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "api documentation for [http-proxy-middleware (v0.17.4)](https://github.com/chimurai/http-proxy-middleware) [![npm package](https://img.shields.io/npm/v/npmdoc-http-proxy-middleware.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-http-proxy-middleware) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-http-proxy-middleware.svg)](https://travis-ci.org/npmdoc/node-npmdoc-http-proxy-middleware)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "http-proxy-middleware": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-http-proxy-middleware",
+    "keywords": [
+        "documentation",
+        "http-proxy-middleware"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_http_proxy_middleware.js",
+    "name": "npmdoc-http-proxy-middleware",
+    "nameAlias": "npmdoc_http_proxy_middleware",
+    "nameOriginal": "npmdoc-http-proxy-middleware",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-http-proxy-middleware.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.2"
+}
