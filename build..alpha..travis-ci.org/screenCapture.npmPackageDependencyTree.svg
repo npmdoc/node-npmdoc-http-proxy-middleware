@@ -13,7 +13,7 @@
 <tspan x="10" y="170">  ├── lodash@4.17.4 </tspan>
 <tspan x="10" y="186">  └─┬ micromatch@2.3.11 </tspan>
 <tspan x="10" y="202">    ├─┬ arr-diff@2.0.0 </tspan>
-<tspan x="10" y="218">    │ └── arr-flatten@1.0.2 </tspan>
+<tspan x="10" y="218">    │ └── arr-flatten@1.0.3 </tspan>
 <tspan x="10" y="234">    ├── array-unique@0.2.1 </tspan>
 <tspan x="10" y="250">    ├─┬ braces@1.8.5 </tspan>
 <tspan x="10" y="266">    │ ├─┬ expand-range@1.8.2 </tspan>
