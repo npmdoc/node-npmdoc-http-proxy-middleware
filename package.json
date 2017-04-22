@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "api documentation for [http-proxy-middleware (v0.17.4)](https://github.com/chimurai/http-proxy-middleware) [![npm package](https://img.shields.io/npm/v/npmdoc-http-proxy-middleware.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-http-proxy-middleware) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-http-proxy-middleware.svg)](https://travis-ci.org/npmdoc/node-npmdoc-http-proxy-middleware)",
+    "description": "#### api documentation for  [http-proxy-middleware (v0.17.4)](https://github.com/chimurai/http-proxy-middleware)  [![npm package](https://img.shields.io/npm/v/npmdoc-http-proxy-middleware.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-http-proxy-middleware) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-http-proxy-middleware.svg)](https://travis-ci.org/npmdoc/node-npmdoc-http-proxy-middleware)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "http-proxy-middleware": "*",
@@ -35,5 +35,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.2"
+    "version": "0.0.3"
 }
